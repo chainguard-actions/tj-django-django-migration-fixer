@@ -1,0 +1,25 @@
+name: Test skip-default-branch-update input
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_EVENT_NAME: pull_request
+      GITHUB_BASE_REF: main
+      GITHUB_HEAD_REF: feature-branch
+      GITHUB_REF: refs/pull/1/merge
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - name: Install Python
+        run: python3 --version
+      - id: action
+        uses: .
+        with:
+          managepy-path: ${{ github.workspace }}/actions/hardened/tj-django--django-migration-fixer/v1.3.3/tests/fixtures/manage.py
+          default-branch: main
+          skip-default-branch-update: 'true'
+      - name: Assert action completed successfully with skip-default-branch-update
+        run: |
+          echo "Action completed with skip-default-branch-update=true without error"
+          echo "PASS"
