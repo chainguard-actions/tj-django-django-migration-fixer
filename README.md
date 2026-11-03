@@ -6,9 +6,9 @@ Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at
 
 ## Versions
 
-| Version | Tag | Upstream commit |
-|---------|-----|-----------------|
-| v1.3.3 | [`v1.3.3`](https://github.com/chainguard-actions/tj-django-django-migration-fixer/tree/v1.3.3) | [`43b769e`](https://github.com/tj-django/django-migration-fixer/commit/43b769ec5870079c2583e00ed5d761f8d79a6bd3) |
+| Version | Tag | Upstream commit | Hardening report |
+|---------|-----|-----------------|------------------|
+| v1.3.3 | [`v1.3.3`](https://github.com/chainguard-actions/tj-django-django-migration-fixer/tree/v1.3.3) | [`43b769e`](https://github.com/tj-django/django-migration-fixer/commit/43b769ec5870079c2583e00ed5d761f8d79a6bd3) | [`HARDENING.md`](https://github.com/chainguard-actions/tj-django-django-migration-fixer/blob/v1.3.3/HARDENING.md) |
 
 ## Privacy
 
